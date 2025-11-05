@@ -1,0 +1,18 @@
+@use "../base/variables" as *;
+
+.btn {
+  &--default,
+  &--outlin {
+    @include btn-settings;
+  }
+
+  &--default {
+    background-color: $bg-btn;
+    color: #fff;
+    border: 1.5px solid $border-btn-color;
+
+    &:hover{
+      background-color: $border-btn-color;
+    }
+  }
+}
