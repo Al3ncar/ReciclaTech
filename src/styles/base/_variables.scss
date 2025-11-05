@@ -1,0 +1,91 @@
+$bg-box: #f3f5f8;
+$bg-btn: #16a34a;
+$bg-number: #2563eb;
+
+$color-subtitle: #4b5563;
+$color-title: #1f2937;
+
+$border-nav-color: #b4aeae;
+$border-btn-color: #21c05c;
+
+$font-poppins: "Poppins", sans-serif;
+$font-size-poppins-p: clamp(1rem, 1vw, 16px);
+$font-size-poppins-h1: clamp(1.563rem, 3vw, 25px);
+
+$font-inter: "Inter", sans-serif;
+$font-size-inter-h3: clamp(1.563rem, 3vw, 25px);
+$font-size-inter-h4: clamp(1.25rem, 1.4vw, 20px);
+$font-size-inter-h5: clamp(0.875rem, 3vw, 14px);
+
+$font-size-title: clamp(1.985rem, 3vw, 31.76px);
+$font-size-icon: clamp(1.25rem, 1.6vw, 20px);
+
+$border-nav: 1px solid $border-nav-color;
+
+@mixin poppins-p {
+  font-family: $font-poppins;
+  font-size: $font-size-poppins-p;
+}
+@mixin poppins-h1 {
+  font-family: $font-poppins;
+  font-size: $font-size-poppins-h1;
+}
+
+@mixin inter-h3 {
+  font-family: $font-inter;
+  font-size: $font-size-inter-h3;
+}
+@mixin inter-h4 {
+  font-family: $font-inter;
+  font-size: $font-size-inter-h4;
+}
+@mixin inter-h5 {
+  font-family: $font-inter;
+  font-size: $font-size-inter-h5;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin list-settings {
+  @include flex-around;
+  @include poppins-p;
+  width: 100%;
+  list-style: none;
+  color: $color-subtitle;
+
+  li {
+    cursor: pointer;
+    text-align: center;
+    width: 35%;
+    margin: 0 1%;
+  }
+}
+
+@mixin btn-settings {
+  @include poppins-p;
+  @include flex-center;
+  width: 100%;
+  padding: 10%;
+  border-radius: 0.4vw;
+  cursor: pointer;
+
+  svg {
+    margin-left: 10%;
+    font-size: $font-size-icon;
+    filter: drop-shadow(0px 0.7px 0px);
+  }
+}
