@@ -1,0 +1,47 @@
+@use "../base/variables" as *;
+
+.header {
+  padding: 2%;
+  &__navgation {
+    @include flex-between;
+    padding-bottom: 1%;
+    border-bottom: $border-nav;
+
+    figure {
+      display: flex;
+      align-items: center;
+      width: 15%;
+
+      img {
+        width: 13%;
+      }
+      figcaption {
+        p {
+          @include poppins-h1;
+          font-size: $font-size-title;
+          margin-left: 1vw;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &--nav {
+      width: 40%;
+      @include flex-between;
+      nav {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        ul {
+          @include list-settings;
+        }
+      }
+
+      &__btn {
+        display: flex;
+        justify-content: flex-end;
+        width: 41%;
+      }
+    }
+  }
+}
